@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center
+  align-items: center;*/
+  background-color: #F2F6F6; }
+  body .app {
+    width: 100vw;
+    height: auto;
+    background-color: #FCD2AF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    body .app .contactForm {
+      margin: 25px;
+      width: 60vw;
+      height: auto;
+      background-color: #A0C1C1; }
+      body .app .contactForm input {
+        font-size: 18px;
+        font-weight: 400;
+        color: #699797;
+        background-color: #FCD2AF; }
+      body .app .contactForm button {
+        font-size: 18px;
+        font-weight: 400;
+        color: #FCD2AF;
+        background-color: #699797;
+        width: 200px;
+        height: 50px;
+        text-align: center; }
+    body .app .contactsList {
+      list-style-type: none; }
+      body .app .contactsList .contactItem {
+        width: auto;
+        height: auto;
+        border: 4px solid #2a3c3c;
+        border-radius: 5px;
+        background-color: #faab6b;
+        margin: 10px; }
+        body .app .contactsList .contactItem .contactLabel {
+          margin-left: 15px;
+          font-size: 24px;
+          font-weight: 600;
+          color: #2a3c3c; }
+          body .app .contactsList .contactItem .contactLabel span {
+            font-size: 24px;
+            font-weight: 300;
+            color: #547878; }
+        body .app .contactsList .contactItem .contactEmail {
+          margin-left: 10px;
+          margin-bottom: 20px;
+          font-size: 24px;
+          font-weight: 600;
+          color: #dd6808; }
