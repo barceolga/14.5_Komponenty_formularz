@@ -28,6 +28,7 @@ body {
         font-weight: 400;
         color: #699797;
         background-color: #FCD2AF;
+        margin: 10px;
       }
       button {
         font-size: 18px;
@@ -37,6 +38,7 @@ body {
         width: 200px;
         height: 50px;
         text-align: center;
+        margin: 10px;
       }
     }
 
@@ -53,21 +55,24 @@ body {
         .contactLabel  {
           margin-left: 15px;
           font-size: 24px;
-          font-weight: 600;
+          font-weight: 800;
           color: #2a3c3c;
-          span {
+
+          .contactLabel_span {
             font-size: 24px;
-            font-weight: 300;
+            font-weight: 500;
             color: #547878;
+            text-shadow: 1px 0.5px #2a3c3c;
           }
         }
 
         .contactEmail {
-          margin-left: 10px;
-          margin-bottom: 20px;
-          font-size: 24px;
-          font-weight: 600;
-          color: #dd6808;
+          margin: 10px;
+          .contactEmail_link {
+            font-size: 24px;
+            font-weight: 600;
+            color: #dd6808;
+          }
         }
       }
 
