@@ -22,7 +22,7 @@ body {
         color: #699797;
         background-color: #FCD2AF;
         margin: 10px; }
-      body .app .contactForm button {
+      body .app .contactForm .submit {
         font-size: 18px;
         font-weight: 400;
         color: #FCD2AF;
