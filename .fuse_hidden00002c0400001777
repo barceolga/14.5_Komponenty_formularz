@@ -6,7 +6,6 @@
   "scripts": {
     "start": "nodemon script.js",
     "sass:watch": "node-sass ./templates/sass/ -wo ./templates/css/",
-    "http-serve": "http-server c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/barceolga/14.5_Komponenty_formularz/issues"
   },
-  "homepage": "https://github.com/barceolga/14.5_Komponenty_formularz#readme",
-  "devDependencies": {
-    "nodemon": "^1.17.5"
-  }
+  "homepage": "https://github.com/barceolga/14.5_Komponenty_formularz#readme"
 }
