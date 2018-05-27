@@ -22,33 +22,15 @@ class ContactForm extends React.Component{
       });
     }
 
+  addToList() {
+        this.setState({
+          contacts: [this.state.contacts, {firstName: this.state.firstName, lastName: this.state.lastName, secondLastName: this.state.secondLastName, email: this.state.eMail, key: (new Date().getTime())}]
+        });
+    }
+
   handleSubmit(event) {
-    /*render() {
-      return {
-        <ul className={'contactsList'}>
-        <div className={'contactItem'}>
-          <img className={'contactImage'} src={'./components/contact.png'}/>
-           <p className={'contactLabel'}>
-               Nombre
-               <span className={''}>{this.state.contact.firstName}</span>
-           </p>
-           <p className={'contactLabel'}>
-               Primer apellido
-               <span className={''}>{this.state.contact.lastName}</span>
-           </p>
-           <p className={'contactLabel'}>
-               Segundo apellido
-               <span className={''}>{this.state.contact.secondLastName}</span>
-           </p className={'contactEmail'}>
-                Correo
-                <a className={'contactEmail_link'} href={'mailto:' + this.state.contact.email}>
-               {this.state.item.email}
-               </a>
-           </p>
-         </div>
-        </ul>
-      };
-    }*/
+
+    addTolist();
     event.preventDefault();
   }
 
