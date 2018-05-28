@@ -1,6 +1,6 @@
 class ContactForm extends React.Component{
   constructor(contact) {
-    super(contact);
+    super();
     this.state = {
       firstName: '',
       lastName: '',
@@ -14,7 +14,7 @@ class ContactForm extends React.Component{
 
   handleInputChange(event) {
       const target = event.target;
-      const value = target.type === 'text';
+      const value = target.value;
       const name = target.name;
 
       this.setState({
@@ -22,15 +22,15 @@ class ContactForm extends React.Component{
       });
     }
 
-  addToList() {
-        this.setState({
-          contacts: [this.state.contacts, {firstName: this.state.firstName, lastName: this.state.lastName, secondLastName: this.state.secondLastName, email: this.state.eMail, key: (new Date().getTime())}]
-        });
-    }
-
   handleSubmit(event) {
+ this.props.addTolist({
+   firstName: this.state.firstName,
+   lastName: this.state.lastName,
+   secondLastName: this.state.secondLastName.
+   emai: this.stateEmail,
+   id: (newDate().getTime())
+ });
 
-    addTolist();
     event.preventDefault();
   }
 
@@ -38,11 +38,38 @@ class ContactForm extends React.Component{
 
   return (
       <form className={'contactForm'} onSubmit={this.handleSubmit}>
-          <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleInputChange} placeholder="Nombre"/>
-          <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleInputChange} placeholder="Primer apellido"/>
-          <input type="text" name="secondLastName" value={this.state.secondLastName} onChange={this.handleInputChange} placeholder="Segundo apellido" />
-          <input type="text" name="eMail" value={this.state.eMail} onChange={this.handleInputChange} placeholder="Correo electrónico"/>
-        <input className={'submit'} type="submit" value= "Añadir contacto" />
+          <input
+              type="text"
+              name="firstName"
+              value={this.state.firstName}
+              onChange={this.handleChange}
+              placeholder="Nombre"
+          />
+          <input
+              type="text"
+              name="lastName"
+              value={this.state.lastName}
+              onChange={this.handleChange}
+              placeholder="Primer apellido"
+          />
+          <input
+              type="text"
+              name="secondLastName"
+              value={this.state.secondLastName}
+              onChange={this.handleChange}
+              placeholder="Segundo apellido"
+          />
+          <input
+              type="text"
+              name="eMail"
+              value={this.state.eMail}
+              onChange={this.handleChange}
+              placeholder="Correo electrónico"
+          />
+        <input
+              className={'submit'}
+              type="submit"
+              value= "Añadir contacto" />
       </form>
     );
   }
